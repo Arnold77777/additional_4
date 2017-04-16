@@ -6,12 +6,13 @@ module.exports = function multiply(first, second) {
     resultArr.fill(0);
 
     for (let i = secondArr.length - 1, k = 0, m = k; i >= 0; i--, k++) {
-        m = k;
+        m = k; 
         for (let j = firstArr.length - 1; j >= 0; j--, m++) {
             if (typeof firstArr[j] === 'undefined' || typeof secondArr[i] === 'undefined') continue;
             resultArr[m] += firstArr[j] * secondArr[i];
         }
     }
+    
     let buffer = 0;
     for (let i = 0; i < resultArr.length; i++) {
         resultArr[i] += buffer;
